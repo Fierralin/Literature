@@ -8,6 +8,6 @@ kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
   hard_wrap: true
 
-paginate: 3
+paginate: 19
 paginate_path: "page_:num"
 gems: [jekyll-paginate]
