@@ -1,0 +1,83 @@
+---
+layout: spot
+---
+<link type='text/css' rel='stylesheet' href='{{site.baseurl}}/css/syntax.css' />
+     <div class='blog-posts hfeed'>
+	  <div class="date-outer">
+		<h2 class='date-header'><span></span></h2>
+		<div class="date-posts">
+        
+<div class='post-outer'>
+<div class='post hentry uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+
+<h3 class='post-title entry-title' itemprop='name'>{{ page.title }}</h3>
+<div class='post-header'><div class='post-header-line-1'></div></div>
+<div class='post-body entry-content' id='postcontent' itemprop='description articleBody'>
+
+	{{ content }}
+
+<div style='clear: both;'></div>
+</div>
+
+<div class='post-footer'>
+<div class='post-footer-line post-footer-line-1'>
+<span class='post-author vcard'>
+Posted by
+<span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+<meta content='https://plus.google.com/111707890407408810353' itemprop='url'/>
+<a class='g-profile' href='https://plus.google.com/111707890407408810353' rel='author' title='author profile'>
+<span itemprop='name'>Leonvaan Fierralin</span>
+</a>
+</span>
+</span>
+<span class='post-timestamp'>
+at
+<abbr class='published' itemprop='datePublished' >{{page.date | date: '%d %h %Y, %H:%M:%S'}}</abbr>
+</span>
+<span class='reaction-buttons'>
+</span>
+<span class='post-comment-link'>
+</span>
+<span class='post-backlinks post-comment-link'>
+</span>
+<span class='post-icons'>
+<span class='item-control blog-admin pid-896917217'>
+<a href='https://www.blogger.com/post-edit.g?blogID=2732476091184064332&postID=1629019488063030448&from=pencil' title='Edit Post'>
+<img alt='' class='icon-action' height='18' src='https://resources.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+</a>
+</span>
+</span>
+<div class='post-share-buttons goog-inline-block'>
+</div>
+</div>
+
+{% if page.tags[0] %}
+<div class='post-footer-line post-footer-line-2'>
+<span class='post-labels'>
+Labels:
+ {% for tag in page.tags %}
+<a href='{{site.baseurl}}/tags/{{tag}}' rel='tag'>{{ tag }}</a>
+ {% endfor %}
+</span>
+</div>
+{% endif %}
+
+<div class='post-footer-line post-footer-line-3'>
+<span class='post-location'>
+</span>
+</div>
+</div>
+
+</div>
+<div class='comments' id='comments'>
+<a name='comments'></a>
+<div id='backlinks-container'>
+<div id='Blog1_backlinks-container'>
+</div>
+</div>
+</div>
+</div>
+
+	  </div></div>
+      
+     </div>
