@@ -20,7 +20,7 @@
 	<div class='widget-content list-label-widget-content'>
 	 <ul>
 		{% for tag in site.tags %}
-		 <li><a dir='ltr' href='{{ site.baseurl }}/tags/{{ tag[0] }}'>{{ tag[0] }}</a><span dir='ltr'></span></li>
+		 <li><a dir='ltr' href='{{ site.baseurl }}/tags/{{ tag[0] }}' data-toggle="tooltip" data-placement="right" title='{{tag[1].size}}'>{{ tag[0] }}</a><span dir='ltr'> ({{tag[1].size}}) </span></li>
 		{% endfor %}
 	</ul>
 

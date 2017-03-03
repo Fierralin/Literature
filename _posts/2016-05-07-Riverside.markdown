@@ -2,7 +2,7 @@
 layout: spotpost
 title:  "Riverside by Agnes Obel"
 date:   2016-05-07 18:57:39 +0800
-categories: Literature
+tags: Literature
 ---
 
 Down by the river by the boats

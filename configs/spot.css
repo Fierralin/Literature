@@ -1,9 +1,10 @@
 body {
 font: normal normal 12px Tahoma, Helvetica, FreeSans, sans-serif;
 color: #cccccc;
-background: #292929 none repeat scroll top left;
+background: #202020 none repeat scroll top left;
 padding: 0 40px 40px 40px;
 }
+/* 292929->202020 303030->282828 333333->2f2f2f */
 html body .region-inner {
 min-width: 0;
 max-width: 100%;
@@ -47,7 +48,7 @@ _background-image: none;
 .content-outer {
 -moz-box-shadow: 0 0 40px rgba(0, 0, 0, .15);
 -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .15);
--goog-ms-box-shadow: 0 0 10px #333333;
+-goog-ms-box-shadow: 0 0 10px #2f2f2f;
 box-shadow: 0 0 40px rgba(0, 0, 0, .15);
 margin-bottom: 1px;
 }
@@ -55,7 +56,7 @@ margin-bottom: 1px;
 padding: 10px 10px;
 }
 .content-inner {
-background-color: #333333;
+background-color: #2f2f2f;
 }
 /* Header
 ----------------------------------------------- */
@@ -107,7 +108,7 @@ display: inline-block;
 padding: .6em 1em;
 font: normal normal 13px Times, Tahoma, Helvetica, FreeSans, sans-serif;
 color: #999999;
-border-left: 1px solid #333333;
+border-left: 1px solid #2f2f2f;
 border-right: 0 solid #404040;
 }
 .tabs-inner .widget li:first-child a {
@@ -212,7 +213,7 @@ font-size: 90%;
 margin: 20px -2px 0;
 padding: 5px 10px;
 color: #888888;
-background-color: #303030;
+background-color: #282828;
 border-bottom: 1px solid #444444;
 line-height: 1.6;
 font-size: 90%;
@@ -243,7 +244,7 @@ border-top: 1px solid #999999;
 border-bottom: 1px solid #999999;
 }
 .comments .comment-thread.inline-thread {
-background-color: #303030;
+background-color: #282828;
 }
 .comments .continue {
 border-top: 2px solid #999999;
@@ -258,7 +259,7 @@ background: transparent none no-repeat scroll top center;
 }
 .blog-pager-older-link, .home-link,
 .blog-pager-newer-link {
-background-color: #333333;
+background-color: #2f2f2f;
 padding: 5px;
 }
 .footer-outer {
@@ -303,7 +304,7 @@ background: transparent none no-repeat scroll top center;
 border-top: none;
 }
 .mobile .main-inner, .mobile .footer-inner {
-background-color: #333333;
+background-color: #2f2f2f;
 }
 .mobile-index-contents {
 color: #cccccc;
