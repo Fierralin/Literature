@@ -1,0 +1,27 @@
+---
+layout: spot
+---
+<h3>Archive</h3><br />
+<div>
+	 <ul>
+	{% for post in site.posts %}
+	  
+      {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
+      {% if currentyear != year %}
+        {% unless forloop.first %}
+		 </ul>
+		</li>
+		{% endunless %}
+        <li>
+		 <ul>
+		  <h4>{{ currentyear }}</h4>
+        {% capture year %}{{currentyear}}{% endcapture %}
+      {% endif %}
+        <li><a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}, {{ post.date | date_to_string }}</a></li>
+	  
+    {% endfor %}
+	 </ul>
+	 
+	<div class='clear'></div>
+	 <span class='widget-item-control'><span class='item-control blog-admin'><a class='quickedit' href='' onclick='' target='configLabel1' title='Edit'><img alt='' height='18' src='' width='18'/></a></span></span>
+<div class='clear'></div></div>

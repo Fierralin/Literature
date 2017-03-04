@@ -20,10 +20,12 @@ layout: spot
      }
 </script>
 
-{% for post in paginator.posts %}
-	{% assign post_str = post.url | replace: '/', '-' %}
-	{% assign post_str = post_str | remove: '.html'%}
-	{% assign post_str = post_str | remove_first: '-'%}
+{% for post in site.posts %}
+  {% for tag in post.tags %}
+    {% if tag == page.tag %}
+	  {% assign post_str = post.url | replace: '/', '-' %}
+	  {% assign post_str = post_str | remove: '.html'%}
+	  {% assign post_str = post_str | remove_first: '-'%}
 
 <div class="date-outer" id="div-{{ post_str }}">
  <h2 class='date-header'><span>{{post.date | date: '%d %h %Y, %H:%M:%S'}}</span></h2>
@@ -83,21 +85,7 @@ layout: spot
 	<div class='comments' id='comments'><a name='comments'></a><div id='backlinks-container'><div id='Blog1_backlinks-container'></div></div></div>
  </div>
 </div></div>
-
-{% endfor %}
-
-<div class='blog-pager' id='blog-pager'>
-    {% if paginator.previous_page %}
-	    {% if paginator.previous_page == 1 %}
-			<span id='blog-pager-newer-link'><a class='blog-pager-newer-link' href='{{ site.baseurl }}/' title='Previous'>&laquo;&nbsp;Previous</a></span>
-		{% else %}
-			<span id='blog-pager-newer-link'><a class='blog-pager-newer-link' href='{{ site.baseurl }}/page_{{ paginator.previous_page }}/' title='Previous'>&laquo;&nbsp;Previous</a></span>
-		{% endif %}
-    {% endif %}
-        <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-		<span id='blog-pager-older-link'><a class='blog-pager-older-link' href='{{ site.baseurl }}/page_{{ paginator.next_page }}/' title='Next'>Next&nbsp;&raquo;</a></span>
 	{% endif %}
-	
-</div>
+  {% endfor %}
+{% endfor %}
 
