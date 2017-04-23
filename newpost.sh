@@ -3,7 +3,7 @@
 echoinfo="Usages: ./newpost [-n post_name] [-N post_title] [-l layout] [-t tags]\
  [-d description] [-c comment_opt] [-f format_end] [-h] \n\
  n, N: n must in english while N could be in chinese \n\
- l: layout options are post, neon, default \n\
+ l: layout options are spotpost \n\
  t: format of tags must be \"tag1 tag2 ...\" \n\
  c: disqus, intensedebate, duoshuo \n\
  f: the format of post source file, default is .md, others: html \n\
@@ -11,7 +11,7 @@ echoinfo="Usages: ./newpost [-n post_name] [-N post_title] [-l layout] [-t tags]
 
 post_srcname="New Post"
 post_title=""
-layout="post"
+layout="spotpost"
 tags=""
 desc=""
 comment_opt=""
@@ -60,7 +60,8 @@ done
 #echo $2
 #echo $#
 
-post_name=`date  "+%Y-%m-%d"`-`echo $post_srcname | sed "s/[ \/ : ^ \& \% \# \! , . { } ( ) * ? \" < > |]/-/g"`.$format_end
+#post_name=`date  "+%Y-%m-%d"`-`echo $post_srcname | sed "s/[ \/ : ^ \& \% \# \! , . { } ( ) * ? \" < > |]/-/g"`.$format_end
+post_name=`date  "2000-01-01"`-`echo $post_srcname | sed "s/[ \/ : ^ \& \% \# \! , . { } ( ) * ? \" < > |]/-/g"`.$format_end
 #echo $post_name
 
 post_name=`echo $post_name | sed 's/'"'"/-'/g'`
@@ -78,7 +79,7 @@ if [ -n "$post_title" ]; then
 else
 	echo title: \"$post_srcname\" >> $file
 fi
-echo date: `date "+%Y-%m-%d %H:%M:%S"` >> $file
+echo date: `date "+%Y-%m-%d %H:%M:%S"` +0800  >> $file
 
 
 if [ -n "$tags" ]; then

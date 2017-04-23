@@ -2,7 +2,7 @@ body {
 font: normal normal 12px Tahoma, Helvetica, FreeSans, sans-serif;
 color: #cccccc;
 background: #202020 none repeat scroll top left;
-padding: 0 40px 40px 40px;
+padding: 0 10px 0 10px;
 }
 /* 292929->202020 303030->282828 333333->2f2f2f */
 html body .region-inner {
@@ -28,7 +28,7 @@ color: #87CEFA;
 }
 a:hover {
 text-decoration:underline;
-color: #8c8c8c;
+color: #62849F;
 }
 .body-fauxcolumn-outer .fauxcolumn-inner {
 background: transparent none repeat scroll top left;
@@ -216,7 +216,7 @@ color: #888888;
 background-color: #282828;
 border-bottom: 1px solid #444444;
 line-height: 1.6;
-font-size: 90%;
+font-size: 96%;
 }
 #comments .comment-author {
 padding-top: 1.5em;
@@ -328,14 +328,7 @@ border-bottom: 1px solid #404040;
 border-left: 1px solid #404040;
 }
 
-body {
-min-width: 960px;
-}
-.content-outer, .content-fauxcolumn-outer, .region-inner {
-min-width: 960px;
-max-width: 960px;
-_width: 960px;
-}
+
 .main-inner .columns {
 padding-left: 0px;
 padding-right: 310px;
@@ -351,9 +344,7 @@ parseInt("310px") + 'px');
 .main-inner .fauxcolumn-left-outer {
 width: 0px;
 }
-.main-inner .fauxcolumn-right-outer {
-width: 310px;
-}
+
 .main-inner .column-left-outer {
 width: 0px;
 right: 100%;
@@ -382,4 +373,48 @@ margin-left: 32px;
 }
 #postcontent p {
 	font-size:11pt;
+}
+
+/* New add things */
+
+@media (min-width: 100px) {
+ body {
+  min-width: 360px;
+ }
+ .content-outer, .content-fauxcolumn-outer, .region-inner {
+  min-width: 360px;
+ }
+ .main-inner .fauxcolumn-center-outer {
+  left: 0px;
+  right: 0px;
+ }
+ .main-inner .columns {
+	padding-left: 0px;
+    padding-right: 0px;
+ }
+ .column-right-outer {
+  display: none;
+ }
+ .main-inner .fauxcolumn-right-outer {
+  width:0px;
+ }
+}
+@media (min-width: 755px) {
+ .content-outer, .content-fauxcolumn-outer, .region-inner {
+  max-width: 960px;
+ }
+ .main-inner .fauxcolumn-center-outer {
+  left: 0px;
+  right: 0px;
+ }
+ .main-inner .columns {
+	padding-left: 0px;
+    padding-right: 310px;
+ }
+ .column-right-outer {
+  display: block;
+ }
+ .main-inner .fauxcolumn-right-outer {
+  width: 310px;
+ }
 }

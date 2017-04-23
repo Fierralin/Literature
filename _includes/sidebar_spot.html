@@ -16,11 +16,11 @@
    </div>
    
    <div class='widget Label' data-version='1' id='Label1'>
-	<h2>Catalogue</h2>
+	<h2>Tags</h2>
 	<div class='widget-content list-label-widget-content'>
 	 <ul>
 		{% for tag in site.tags %}
-		 <li><a dir='ltr' href='{{ site.baseurl }}/tags/{{ tag[0] }}' data-toggle="tooltip" data-placement="right" title='{{tag[1].size}}'>{{ tag[0] }}</a><span dir='ltr'> ({{tag[1].size}}) </span></li>
+		 <li><a dir='ltr' href='{{ site.baseurl }}/tag/{{ tag[0] }}' data-toggle="tooltip" data-placement="right" title='{{tag[1].size}}'>{{ tag[0] }}</a><span dir='ltr'> ({{tag[1].size}}) </span></li>
 		{% endfor %}
 	</ul>
 
@@ -31,7 +31,7 @@
 
 
    <div class='widget BlogArchive' data-version='1' id='BlogArchive1'>
-	<h2>Blog Archive</h2>
+	<h2>Archive</h2>
 	 <div class='widget-content'>
 	 <div id='ArchiveList'>
 	 <div id='BlogArchive1_ArchiveList'>

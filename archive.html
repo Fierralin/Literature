@@ -2,7 +2,7 @@
 layout: spot
 ---
 <h3>Archive</h3><br />
-<div>
+<div class='widget-content list-label-widget-content'>
 	 <ul>
 	{% for post in site.posts %}
 	  
@@ -13,8 +13,8 @@ layout: spot
 		</li>
 		{% endunless %}
         <li>
+		 <h4>{{ currentyear }}</h4>
 		 <ul>
-		  <h4>{{ currentyear }}</h4>
         {% capture year %}{{currentyear}}{% endcapture %}
       {% endif %}
         <li><a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}, {{ post.date | date_to_string }}</a></li>
@@ -25,3 +25,4 @@ layout: spot
 	<div class='clear'></div>
 	 <span class='widget-item-control'><span class='item-control blog-admin'><a class='quickedit' href='' onclick='' target='configLabel1' title='Edit'><img alt='' height='18' src='' width='18'/></a></span></span>
 <div class='clear'></div></div>
+
