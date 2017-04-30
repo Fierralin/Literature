@@ -75,6 +75,22 @@ Labels:
 </div>
 </div>
 </div>
+
+<nav class="article-previous fn-clear">
+ {% if page.previous %}
+  <a class="prev" href="{{ site.baseurl|append:page.previous.url }}"
+  rel="bookmark" title="{{page.previous.title}}">
+    &laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}
+  </a>
+ {% endif %}
+ {% if page.next %}
+  <a class="next" href="{{ site.baseurl|append:page.next.url }}"
+  rel="bookmark" title="{{page.next.title}}" style="float:right">
+    {{ page.next.title | truncatewords:5 }}&nbsp;&raquo;
+  </a>
+ {% endif %}
+</nav>
+
 </div>
 
 	  </div></div>
