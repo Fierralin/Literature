@@ -1,5 +1,5 @@
 ---
-layout: spotpost
+layout: spotpoem
 title:  "Riverside by Agnes Obel"
 date:   2016-05-07 18:57:39 +0800
 tags: Literature

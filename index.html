@@ -39,8 +39,12 @@ layout: spot
 	</h3>
 	
 	<!--div class='post-header'><div class='post-header-line-1'></div></div-->
-	
+
+	{% if post.layout == 'spotpoem' %}
+	<div class="post-body entry-content post-content-p" id="desc-{{ post_str }}" itemprop="description articleBody">
+	{% else %}
 	<div class="post-body entry-content" id="desc-{{ post_str }}" itemprop="description articleBody">
+	{% endif %}
 	 {{ post.content | truncatehtml: 100 }}
 	 <!--span style="color: honeydew;">Description:</span>
 	 <span style="">{{ post.description }}</span-->

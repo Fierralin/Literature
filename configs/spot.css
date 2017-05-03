@@ -20,11 +20,11 @@ font-size: 22px;
 }
 a:link {
 text-decoration:none;
-color: #6897BF;
+color: #87CEFA;
 }
 a:visited {
 text-decoration:none;
-color: #87CEFA;
+color: #6897BF;
 }
 a:hover {
 text-decoration:underline;
@@ -376,6 +376,13 @@ margin-left: 32px;
 }
 
 /* New add things */
+
+.post-body p {
+ text-indent: 2em;
+}
+.post-content-p p {
+ text-indent: 0em;
+}
 
 @media (min-width: 100px) {
  body {

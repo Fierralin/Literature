@@ -3,10 +3,10 @@
 echo Usage: ./addtags.sh tag1 tag2 ...
 
 for tag in $@; do
-	tagpath=tags/$tag
-	tagindx=tags/$tag/index.html
+	tagpath=tag/$tag
+	tagindx=tag/$tag/index.html
 	if [ ! -d $tagpath ]; then
-		mkdir tags/$tag
+		mkdir tag/$tag
 	fi
 	if [ ! -f $tagindx ]; then
 		echo --- > $tagindx
