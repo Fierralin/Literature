@@ -10,4 +10,4 @@ kramdown:
 
 paginate: 19
 paginate_path: "page_:num"
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]

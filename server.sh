@@ -1,1 +1,1 @@
-jekyll.ruby2.1 server -d ../__lt -H 0.0.0.0 -P 6339
+jekyll.ruby2.1 build -d /srv/www/Literature
